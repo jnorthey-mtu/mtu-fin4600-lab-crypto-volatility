@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments (uv creates .venv)
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+executed_*.ipynb
+
+# Editors / OS
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets (optional CoinGecko API key)
+.env
+*.key
+
+# NOTE: data/*.csv is intentionally NOT ignored. The instructor-provided
+# CoinGecko cache lives in data/ so everyone analyzes identical data.

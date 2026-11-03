@@ -1,0 +1,26 @@
+[project]
+name = "mtu-fin4600-lab-crypto-volatility"
+version = "1.0.0"
+description = "FIN 4600 Fintech Foundations: cryptocurrency volatility lab using pandas and the CoinGecko API"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "pandas>=2.1",
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "jinja2>=3.1",      # needed by pandas Styler (.style.format)
+    "yfinance>=0.2.40", # optional SPY comparison (Task 12)
+]
+
+[dependency-groups]
+# Installed by default with `uv sync`
+dev = [
+    "jupyterlab>=4.0",
+    "ipykernel>=6.29",
+]
+
+[tool.uv]
+# This is a lab, not a distributable package: install dependencies only.
+package = false
