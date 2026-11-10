@@ -2,6 +2,8 @@
 
 In this lab you use **pandas** and the free **CoinGecko API** to measure and compare the risk of five cryptocurrencies (Bitcoin, Ethereum, Cardano, Solana, Chainlink). You will calculate volatility, correlation, Value at Risk, Sharpe ratio, drawdown, and volatility clustering, then interpret what the numbers mean.
 
+**You do not need to know how to program.** All the code is written for you and every line is explained in comments. Your job is to run it, predict what will happen, try small experiments (change one value and run again), and answer the written questions. We will walk through the code together in class.
+
 ## What you need
 
 - [uv](https://docs.astral.sh/uv/) (Python package and project manager)
@@ -44,9 +46,20 @@ Then open `crypto_volatility_lab.ipynb` in the browser tab that appears.
 
 ## How to work
 
-- Cells marked **Task** contain `# YOUR CODE HERE`. Replace the placeholder with your own code.
-- The cell after each task runs automatic checks and prints ✅ or ❌. A ✅ means your code is plausible, not that your interpretation is right.
-- Answer all seven discussion questions in the notebook, **citing specific numbers** from your results.
+- Run the cells in order from top to bottom (Shift+Enter) and read the comments in each code cell.
+- 🔮 **Predict:** decide what you expect before running the next cell.
+- 🧪 **Experiment:** change the one value marked in the code, run the cell again, and record what happened.
+- ✍️ **Answer:** the graded written questions (100 points). **Cite specific numbers** from your tables and charts.
+- ✅ / ❌ in the output confirm the finance ideas along the way.
+
+| Part | Topic | Points |
+|---|---|---|
+| 1–2 | Data from the CoinGecko API, prices and returns | |
+| 3 | Volatility and a risk ranking | 15 |
+| 4 | Correlation and diversification | 15 |
+| 5 | Value at Risk, Expected Shortfall, Sharpe ratio, drawdown | 40 |
+| 6 | Volatility clustering, risk vs. return | 15 |
+| 7 | Crypto vs. the S&P 500, limitations | 15 |
 
 ## About the data
 
@@ -63,8 +76,8 @@ Never commit an API key. `.env` files are already ignored by git.
 
 ## Submitting
 
-1. *Kernel → Restart & Run All*. It must finish with no errors.
-2. Confirm the checks pass and all plots have titles and labels.
+1. Restart the kernel and run all cells (JupyterLab: *Kernel → Restart Kernel and Run All Cells*; VS Code: **Restart**, then **Run All**). It must finish with no errors.
+2. Confirm every ✍️ answer is filled in and cites numbers.
 3. Save and submit `crypto_volatility_lab.ipynb` **with outputs visible** through the course site.
 
 ## Troubleshooting
@@ -74,6 +87,7 @@ Never commit an API key. `.env` files are already ignored by git.
 | `429 Too Many Requests` | CoinGecko rate limit. Wait a minute, or ask your instructor for the `data/` files. |
 | Kernel not found in VS Code | Run `uv sync`, then reload VS Code and reselect the `.venv` interpreter. |
 | `ModuleNotFoundError` | The notebook is using the wrong kernel. Select the `.venv` kernel. |
-| SPY download fails | Task 12 is optional and skips itself when offline. |
+| SPY download fails | Part 7 skips the SPY comparison when offline; answer Q7(b) and note that SPY was unavailable. |
+| Something got confusing | Restart the kernel and run all cells again; everything is rebuilt from the top. |
 
 *Educational use only. Nothing here is investment advice.*
